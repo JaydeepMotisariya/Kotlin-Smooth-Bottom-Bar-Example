@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboard_fragment">
+
+    <fragment
+        android:id="@+id/dashboard_fragment"
+        android:name="com.riseup.smoothbottombar.navigationMenu.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardfragment_to_leadershipFragment"
+            app:destination="@id/leadership_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leadership_fragment"
+        android:name="com.riseup.smoothbottombar.navigationMenu.LeadershipFragment"
+        android:label="Leaderboard"
+        tools:layout="@layout/fragment_leadership" >
+        <action
+            android:id="@+id/action_leadershipFragment_to_storeFragment"
+            app:destination="@id/store_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/store_fragment"
+        android:name="com.riseup.smoothbottombar.navigationMenu.StoreFragment"
+        android:label="Store"
+        tools:layout="@layout/fragment_store" >
+        <action
+            android:id="@+id/action_storeFragment_to_profileFragment"
+            app:destination="@id/profile_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.riseup.smoothbottombar.navigationMenu.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
